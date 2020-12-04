@@ -11,7 +11,7 @@ To try this out, steps:
 
 - [Install stable Rust](https://rustup.rs/)
 - [Install wasm-pack](https://rustwasm.github.io/wasm-pack/installer/)
-- Build the nodejs module: `wasm-pack build-t nodejs`
+- Build the nodejs module: `wasm-pack build -t nodejs`
 
 Using from node:
 
