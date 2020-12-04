@@ -1,0 +1,15 @@
+[package]
+name = "ado-jdbc"
+version = "0.1.0"
+authors = ["Julius de Bruijn <julius+github@nauk.io>"]
+edition = "2018"
+
+[package.metadata.wasm-pack.profile.release]
+wasm-opt = ["-Oz", "--enable-mutable-globals"]
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+wasm-bindgen = "0.2"
+connection-string = "0.1.10"
