@@ -38,4 +38,12 @@ impl JdbcString {
     pub fn get_param(&self, key: &str) -> Option<String> {
         self.inner.properties().get(key).map(|s| s.to_string())
     }
+
+    pub fn set_param(&mut self, key: &str, value: &str) -> Option<String> {
+        self.inner.properties_mut().insert(key.into(), value.into())
+    }
+
+    pub fn to_string(&self) -> String {
+        format!("{}", self.inner)
+    }
 }
